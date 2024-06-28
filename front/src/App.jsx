@@ -17,7 +17,7 @@ function App() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get("http://localhost:5000/user/me", { withCredentials: true })
+      .get("https://todo-3-6wnk.onrender.com/user/me", { withCredentials: true })
       .then((res) => {
         setUser(res.data.user);
         setIsAuthenticated(true);

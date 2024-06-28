@@ -16,7 +16,7 @@ function Register() {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/user/register",
+        "https://todo-3-6wnk.onrender.com/user/register",
         { name, email, password },
         {
           withCredentials: true,

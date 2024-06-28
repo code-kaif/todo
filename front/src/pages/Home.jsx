@@ -17,7 +17,7 @@ const Home = () => {
   const updateHandler = async (id) => {
     try {
       const { data } = await axios.put(
-        `http://localhost:5000/task/${id}`,
+        `https://todo-3-6wnk.onrender.com/task/${id}`,
         {},
         { withCredentials: true }
       );
@@ -30,7 +30,7 @@ const Home = () => {
 
   const deleteHandler = async (id) => {
     try {
-      const { data } = await axios.delete(`http://localhost:5000/task/${id}`, {
+      const { data } = await axios.delete(`https://todo-3-6wnk.onrender.com/task/${id}`, {
         withCredentials: true,
       });
       toast.success(data.message);
@@ -45,7 +45,7 @@ const Home = () => {
     setLoading(true);
     try {
       const { data } = await axios.post(
-        "http://localhost:5000/task/new",
+        "https://todo-3-6wnk.onrender.com/task/new",
         {
           title,
           description,
@@ -68,7 +68,7 @@ const Home = () => {
 
   useEffect(() => {
     axios
-      .get("http://localhost:5000/task/all", { withCredentials: true })
+      .get("https://todo-3-6wnk.onrender.com/task/all", { withCredentials: true })
       .then((res) => {
         setTask(res.data.task);
       })

@@ -11,7 +11,7 @@ const Header = () => {
   const handleLogout = async () => {
     setLoading(true)
     try {
-      const { data } = await axios.get("http://localhost:5000/user/logout", {
+      const { data } = await axios.get("https://todo-3-6wnk.onrender.com/user/logout", {
         withCredentials: true,
       });
       toast.success(data.message);
